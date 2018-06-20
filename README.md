@@ -2,9 +2,7 @@
 
 Command line utility for AWS EC2 scaffolding and backup.
 
-Disclaimer:
-
-This utility was built in 2016, way before I discovered HashiCorp's excellent tool, [Terraform](https://www.hashicorp.com/products/terraform), which I highly recommend.
+> _Disclaimer: This utility was built in 2016, way before I discovered HashiCorp's excellent tool, [Terraform](https://www.hashicorp.com/products/terraform), which I highly recommend._
 
 ## Pre-requisites
 
