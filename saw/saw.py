@@ -149,7 +149,6 @@ def publish(args):
     source_inst_name = args.get('--source')
     dest_inst_name = args.get('--dest')
     new_args = {}
-    version = helpers.get_new_backup_version(source_inst_name)
     
     # Get current user's name
     iam = boto3.resource('iam')

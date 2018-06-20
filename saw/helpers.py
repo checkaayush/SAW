@@ -50,8 +50,6 @@ def confirm_launch():
         bool: Launch confirmed or not
     """
     print "\nAbout to launch instance(s) with following configuration:\n"
-    instance_type = config['launch']['InstanceType']
-    details = config['instance_type_details'][instance_type]
     tabularize.instance_type(config['launch']['InstanceType'])
     choice = raw_input('\nAre you sure?: ([y]/n) ') or 'y'
     return (choice == 'y' or choice == 'Y')
