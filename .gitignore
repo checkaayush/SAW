@@ -1,0 +1,18 @@
+# Compiled python modules
+*.pyc
+
+# Python Egg info
+saw.egg-info/
+
+# Python build directory
+build/
+
+# Python distribution directory
+dist/
+
+# Virtual Env directory
+.venv/
+
+# PM2
+pm2_backend.json
+pm2_frontend.json

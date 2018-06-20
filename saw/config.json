@@ -1,0 +1,85 @@
+{
+    "launch": {
+        "ImageId": "ami-18451e77",
+        "KeyName": "mumbai-socialcops-dev",
+        "MinCount": 1,
+        "MaxCount": 1,
+        "InstanceType": "t2.medium",
+        "SecurityGroupIds": ["sg-b5a15adc", "sg-852ab4ee"],
+        "SubnetId": "subnet-e7da3c8e",
+        "DisableApiTermination": true,
+        "IamInstanceProfile": {
+            "Name": "s3-visualize-v1-dev"
+        }
+    },
+    "instance_type_details": {
+        "m4.xlarge": {
+            "Model": "m4.xlarge",
+            "vCPU": "4",
+            "Mem (GiB)": "16",
+            "SSD Storage (GB)": "EBS",
+            "EBS Bandwidth (Mbps)": "750"
+        },
+        "t2.medium": {
+            "Model": "t2.medium",
+            "vCPU": "2",
+            "Mem (GiB)": "4"
+        }
+    },
+    "image_attributes": [
+        "Name",
+        "ImageId",
+        "State",
+        "CreationDate",
+        "Description"
+    ],
+    "instance_attributes": [
+        "Name",
+        "InstanceId",
+        "ImageId",
+        "State",
+        "PublicIpAddress"
+    ],
+    "elastic_ip_attributes": [
+        "InstanceId",
+        "PublicIp",
+        "Domain"
+    ],
+    "pm2": {
+        "backend": {
+          "apps": [
+            {
+              "name": "backend",
+              "script": "index.js"
+            }
+          ],
+          "deploy": {
+            "push": {
+              "post-deploy": "node --version && npm install && pm2 startOrRestart deployment/pm2-config.json",
+              "repo": "",
+              "host": "<ENTER HOST IP HERE>",
+              "user": "dev",
+              "path": "/opt/deployments/backend",
+              "ref": "origin/master"
+            }
+          }
+        },
+
+        "frontend": {
+          "apps": [
+            {
+              "name": "frontend"
+            }
+          ],
+          "deploy": {
+            "push": {
+              "repo": "",
+              "path": "",
+              "host": "<ENTER HOST IP HERE>",
+              "ref": "origin/master",
+              "user": "dev"
+            }
+          }
+        }
+    }
+}
