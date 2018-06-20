@@ -7,7 +7,7 @@ from nose.tools import *
 
 from saw import helpers
 
-instance_id = 'i-02d86bc0849e09698'
+instance_id = ''
 ec2 = boto3.resource('ec2')
 instance = ec2.Instance(instance_id)
 

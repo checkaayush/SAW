@@ -12,11 +12,11 @@ def test_parse():
     ec2 = boto3.resource('ec2')
     instances = ec2.instances.filter(Filters=[{
                                         'Name': 'tag-value',
-                                        'Values': ['NITI_DASHBOARD']
+                                        'Values': ['MYTAG']
                                     }])
     # tabularize.instances([i.instance_id for i in instances])
     slack.parse(instances)
-    # image = ec2.Image('ami-16c9a379')  # DASHBOARD_STARTER
+    # image = ec2.Image('<AMI ID>')
     # parsed = slack.parse(image)
     # print parsed
     # slack.post(parsed)

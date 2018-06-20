@@ -7,7 +7,7 @@ setup(
     name='saw',
     version='0.1',
     description='saw - Command line utility for AWS EC2 scaffolding and backup',
-    url='http://github.com/checkaayush/saw',
+    url='https://github.com/checkaayush/SAW',
     author='Aayush Sarva',
     author_email='checkaayush@gmail.com',
     packages=['saw'],

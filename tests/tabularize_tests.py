@@ -19,12 +19,3 @@ def test_images():
 
 def test_instances():
     tabularize.instances()
-
-def test_instance_type():
-    tabularize.instance_type()
-
-def test_instance():
-    ec2 = boto3.resource('ec2')
-    i_id = 'i-abc123' # Sample
-    i = ec2.Instance(i_id)
-    tabularize.instance(i)
