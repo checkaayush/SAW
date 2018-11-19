@@ -1,6 +1,6 @@
 # SAW
 
-Command line utility for AWS EC2 scaffolding and backup.
+Command line utility for simple AWS EC2 provisioning and backups
 
 > _Disclaimer: This utility was built in 2016, way before I discovered HashiCorp's excellent tool, [Terraform](https://www.hashicorp.com/products/terraform), which I highly recommend._
 
